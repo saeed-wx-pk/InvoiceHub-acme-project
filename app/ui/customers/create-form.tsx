@@ -12,7 +12,7 @@ import { Button } from '@/app/ui/button';
 import { createInvoice, State } from '@/app/lib/actions';
 import { useActionState, useState } from 'react';
 
-export default function Form({ customers }: { customers: CustomerField[] }) {
+export default function Form() {
   const initialState : State = { message:null, errors: {} };
   const [ state , formAction , isPending ] = useActionState(createInvoice,initialState)
   
@@ -36,11 +36,11 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
               <option value="" disabled>
                 Select a customer
               </option>
-              {customers.map((customer) => (
-                <option key={customer.id} value={customer.id}>
-                  {customer.name}
+              
+                <option >
+                    helo
                 </option>
-              ))}
+              
             </select>
             <UserCircleIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500" />
           </div>

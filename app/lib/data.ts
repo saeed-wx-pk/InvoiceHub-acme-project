@@ -6,8 +6,10 @@ import {
   InvoicesTable,
   LatestInvoiceRaw,
   Revenue,
+  
 } from './definitions';
 import { formatCurrency } from './utils';
+import bcrypt from 'bcrypt';
 
 export async function fetchRevenue() {
   try {
@@ -89,7 +91,8 @@ export async function fetchFilteredInvoices(
   currentPage: number,
 ) {
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
-
+  
+  
   try {
     const invoices = await sql<InvoicesTable>`
       SELECT
@@ -215,3 +218,6 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error('Failed to fetch customer table.');
   }
 }
+
+
+
