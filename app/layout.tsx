@@ -2,6 +2,7 @@ import '@/app/ui/global.css'
 import { inter } from './ui/fonts';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: {
@@ -19,6 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6325748192235388"
+      crossOrigin="anonymous"></script>
+      </Head>
       <body className={`${inter.className} antialiased`}>
         <Suspense >
           {children}
