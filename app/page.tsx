@@ -12,12 +12,12 @@ export default function Page() {
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
         <AcmeLogo />
         <div className="ml-auto">
-          <div className="flex gap-3">
-            <InstagramIcon />
-            <XIcon/>
-            <LinkedinIcon/>
-            <FacebookIcon/>
-            <GithubIcon/>
+          <div className="hidden gap-3 md:flex">
+            <InstagramIcon color='white'/>
+            <XIcon color='white'/>
+            <LinkedinIcon color='white'/>
+            <FacebookIcon color='white'/>
+            <GithubIcon color='white'/>
             
           </div>
         </div>
@@ -42,6 +42,14 @@ export default function Page() {
             Designed by <strong><a href="https://saeedpk.vercel.app" className="text-blue-400">Saeed Pk</a></strong> <br />
             This is open source project give ✨ on <a href="https://github.com/saeed-wx-pk/InvoiceHub-acme-project" className='text-blue-400 '>Github<span className='text-xs'>🔗</span></a>
           </p>
+          <div className="flex gap-3 md:hidden">
+            <InstagramIcon color='black'/>
+            <XIcon color='black'/>
+            <LinkedinIcon color='black'/>
+            <FacebookIcon color='black'/>
+            <GithubIcon color='black'/>
+            
+          </div>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
