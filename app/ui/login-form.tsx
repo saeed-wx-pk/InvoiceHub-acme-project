@@ -4,11 +4,13 @@ import {
   AtSymbolIcon,
   KeyIcon,
   ExclamationCircleIcon,
+  ArrowLeftIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 import { authenticate } from '../lib/actions';
 import { useActionState } from 'react';
+import React from 'react';
 
 export default function LoginForm() {
   const [errorMessage, formAction, isPending] = useActionState(
@@ -73,6 +75,9 @@ export default function LoginForm() {
               </>
           )}
         </div>
+        <Button className="mt-1 bg-blue-300 hover:bg-blue-200 " aria-disabled={isPending} >
+          <ArrowLeftIcon className="mr-2 h-5 w-5 " /> Back 
+        </Button>
       </div>
     </form>
   );
